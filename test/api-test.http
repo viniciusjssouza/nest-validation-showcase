@@ -1,0 +1,49 @@
+### Create Library - INVALID request
+POST http://localhost:3000/libraries
+Content-Type: application/json
+
+{
+  "name": "",
+  "repository": "github",
+  "stars": -1.5,
+  "language": "Portuguese"
+}
+
+### Create Library - VALID request
+POST http://localhost:3000/libraries
+Content-Type: application/json
+
+{
+  "name": "ReactJS",
+  "repository": "https://github.com/facebook/react",
+  "stars": 148000,
+  "language": "Javascript"
+}
+
+### Create Review - INVALID request
+POST http://localhost:3000/reviews
+Content-Type: application/json
+
+{
+  "rating": 5,
+  "libraryId": 88,
+  "user": {
+    "name": "Vinicius Souza",
+    "email": "email invalido"
+  }
+}
+
+
+### Create Review - INVALID request
+POST http://localhost:3000/reviews
+Content-Type: application/json
+
+{
+  "rating": 2,
+  "comment": "you asshole!",
+  "libraryId": 88,
+  "user": {
+    "name": "Vinicius Souza",
+    "email": "email invalido"
+  }
+}
